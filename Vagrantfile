@@ -65,4 +65,15 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get update
   #   sudo apt-get install -y apache2
   # SHELL
+
+  # set hostname
+  config.vm.hostname = 'keywordlove-dev'
+
+  # after first provisioning login as current user 
+  # forward current ssh key
+  if (File.exist?('.vagrant/machines/default/virtualbox/id'))
+    config.ssh.username = ENV['USER']                                                                                                                    
+    config.ssh.private_key_path = '~/.ssh/id_rsa'                                                                                                        
+    config.ssh.forward_agent = true  
+  end
 end
