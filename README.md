@@ -25,4 +25,6 @@ Keyword Love Vagrant
 
 12. install python-dev `sudo apt-get install python-dev`
 
+13. install libffi-dev (for bcrypt) `sudo apt-get install libffi-dev`
+
 13. follow the instructions in the keywordlove readme https://github.com/zconnelly13/keywordlove
