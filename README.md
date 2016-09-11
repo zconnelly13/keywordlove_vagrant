@@ -5,7 +5,7 @@ Keyword Love Vagrant
 
 2. Clone this repository
 
-3. `vagrant up --provider virtualbox`
+3. `vagrant up --provider virtualbox && vagrant ssh`
 
 4. `sudo adduser <username>`
 
@@ -27,4 +27,11 @@ Keyword Love Vagrant
 
 13. install libffi-dev (for bcrypt) `sudo apt-get install libffi-dev`
 
-13. follow the instructions in the keywordlove readme https://github.com/zconnelly13/keywordlove
+14. Uncomment the following lines
+    ```
+      # config.ssh.username = ENV['USER'] 
+      # config.ssh.private_key_path = '~/.ssh/id_rsa'
+      # config.ssh.forward_agent = true
+    ```
+
+15. follow the instructions in the keywordlove readme https://github.com/zconnelly13/keywordlove
